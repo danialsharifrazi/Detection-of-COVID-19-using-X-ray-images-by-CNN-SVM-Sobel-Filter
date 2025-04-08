@@ -102,7 +102,7 @@ def CNN_SVM():
 
         model.compile(optimizer=Adam(),loss=hinge,metrics=['accuracy'])
         net_history=model.fit(x_train, y_train, batch_size=32, epochs=n_epch,validation_data=[x_valid,y_valid],callbacks=[lg])
-        model.save(f'./CNN+SVM_fold{counter}.h5')
+        model.save(f'./CNN+SVM_folds{counter}.h5')
 
         lst_net_histories.append(net_history)
 
